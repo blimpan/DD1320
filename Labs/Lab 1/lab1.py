@@ -9,7 +9,9 @@ class Drama:
         self.rating = float(a_rating)
         self.actors = some_actors
         self.view_rate = float(a_view_rate)
-        self.genre = a_genre
+        self.genre = a_genre.split(",")
+        for i in range(len(self.genre)):
+            self.genre[i] = self.genre[i].strip()
         self.director = a_director
         self.writer = a_writer
         self.year = int(a_year)
@@ -30,6 +32,17 @@ class Drama:
 
     def is_older_than(self, another_year):
         return self.year < another_year
+
+    def get_genre(self):
+        return self.genre
+
+
+def print_file():
+    with open("kdrama.csv", encoding="utf-8") as drama_file:
+
+        csv_reader = csv.reader(drama_file)  # reader object used for reading from csv-file
+        for line in csv_reader:
+            print(line)
 
 
 def test_function():
@@ -72,6 +85,14 @@ def search_in_list(drama_list):
             print(drama.title, "has a rating above", a_rating, "and was released after", a_year)
 
 
+def find_genre(drama_list, a_genre):
+    for drama in drama_list:
+        if a_genre in drama.get_genre():
+            print(drama.title)
+
+
+# print_file()
 # test_function()
 # print(*get_all_dramas())
 # search_in_list(get_all_dramas())
+# find_genre(get_all_dramas(), "Teen")
