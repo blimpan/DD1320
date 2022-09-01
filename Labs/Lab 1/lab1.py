@@ -9,9 +9,7 @@ class Drama:
         self.rating = float(a_rating)
         self.actors = some_actors
         self.view_rate = float(a_view_rate)
-        self.genre = a_genre.split(",")
-        for i in range(len(self.genre)):
-            self.genre[i] = self.genre[i].strip()
+        self.genre = a_genre
         self.director = a_director
         self.writer = a_writer
         self.year = int(a_year)
@@ -87,7 +85,10 @@ def search_in_list(drama_list):
 
 def find_genre(drama_list, a_genre):
     for drama in drama_list:
-        if a_genre in drama.get_genre():
+        genre_list = drama.get_genre().split(",")
+        for i in range(len(genre_list)):
+            genre_list[i] = genre_list[i].strip()
+        if a_genre in genre_list:
             print(drama.title)
 
 
