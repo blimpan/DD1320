@@ -37,10 +37,10 @@ def magician_function():
 
 
 # test_function()
-magician_function()
+# magician_function()
 # Number series for correct printout 7 1 12 2 8 3 11 4 9 5 13 6 10
 
-"""
+
 class TestQueue(unittest.TestCase):
 
     def test_isEmpty(self):
@@ -63,4 +63,4 @@ class TestQueue(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-"""
+

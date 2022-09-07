@@ -8,25 +8,25 @@ class Node:
 
 class LinkedQ:
     def __init__(self):
-        self.first = None
-        self.last = None
+        self._first = None
+        self._last = None
 
     def enqueue(self, item):
         new_node = Node(item)
         if self.isEmpty():
-            self.first = new_node
-            self.last = new_node
+            self._first = new_node
+            self._last = new_node
         else:
-            self.last.next = new_node
-            self.last = new_node
+            self._last.next = new_node
+            self._last = new_node
 
     def dequeue(self):
         if self.isEmpty():
             pass
         else:
-            item = self.first
-            self.first = self.first.next
+            item = self._first
+            self._first = self._first.next
             return item.value
 
     def isEmpty(self):
-        return self.first is None
+        return self._first is None
