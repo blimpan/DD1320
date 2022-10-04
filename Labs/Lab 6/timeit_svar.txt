@@ -1,0 +1,8 @@
+Parametern stmt
+- Uttrycket som ska tas tid på.
+Parametern number
+- Antalet gånger huvuduttrycket ska exekveras.
+Vad tar timeit tid på?
+- Exekveringen av ett angivet uttryck.
+Vad skrivs ut av ett anrop av timeit?
+- Hur lång tid exekveringen av ett uttryck 'number' antal gånger tar mätt i sekunder.
