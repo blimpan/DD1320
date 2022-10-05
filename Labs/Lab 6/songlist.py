@@ -6,10 +6,14 @@ class Song:
         self.title = a_title
 
     def __lt__(self, other):
-        return other.artist > self.artist
+        return other.track_id > self.track_id
 
     def __str__(self):
         return self.title + " by " + self.artist
+
+    def __eq__(self, other):
+        return other.track_id == self.track_id
+
 
 if __name__ == "__main__":
     songs = []
