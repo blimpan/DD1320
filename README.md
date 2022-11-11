@@ -8,5 +8,6 @@
 * [Lab 6](https://github.com/naff1x/DD1320/tree/main/Labs/Lab%206)
 * [Lab 7](https://github.com/naff1x/DD1320/tree/main/Labs/Lab%207)
 * [Lab 8](https://github.com/naff1x/DD1320/tree/main/Labs/Lab%208)
+* [Lab 9](https://github.com/naff1x/DD1320/tree/main/Labs/Lab%208)
 
 ## Work in progress (antingen inte klara eller inte godkända än)
